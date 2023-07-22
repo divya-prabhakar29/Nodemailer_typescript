@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -34,9 +35,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var nodemailer = require("nodemailer");
-//import nodemailer from "nodemailer";
-var Mail = require("nodemailer/lib/mailer");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
         var transporter, info;
@@ -59,8 +59,8 @@ function main() {
                             to: "divya29prabhakar@gmail.com",
                             subject: "Hello from node",
                             text: "Hello world?",
-                            html: "<strong>Hello world?</strong>"
-                            //headers: { 'x-myheader': 'test header' }
+                            html: { path: 'D:/type_nodemailer/index.html' },
+                            //"<strong>Hello world?</strong>"
                         })];
                 case 1:
                     info = _a.sent();
